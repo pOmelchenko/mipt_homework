@@ -4,19 +4,14 @@
 int main(void)
 {
     int num;
-
     scanf("%d", &num);
 
-    int i = 0;
-    while (num > 0) {
+    do {
         if (num % 10 % 2) {
             fprintf(stderr, "NO\n");
             return 1;
         }
-
-        num /= 10;
-        i++;
-    }
+    } while (num /= 10);
 
     fprintf(stdout, "YES\n");
 
