@@ -3,8 +3,7 @@
 
 int main(void)
 {
-    int num, res;
-    bool flag = 0;
+    int num;
 
     scanf("%d", &num);
 
