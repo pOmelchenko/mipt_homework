@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main() {
+int main(void)
+{
     float a, b, c;
     scanf("%f%f%f", &a, &b, &c);
 

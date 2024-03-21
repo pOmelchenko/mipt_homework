@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-int main(void) {
+int main(void)
+{
     int a, b, c;
     bool can_be = false;
 

@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include <stdbool.h>
 
-int main(void) {
+int main(void)
+{
     int month;
 
     scanf("%d", &month);
