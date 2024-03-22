@@ -13,8 +13,7 @@ void var_one(uint64_t num)
 
 void var_two(uint64_t num)
 {
-    // тест с num = 64 провалился, сдвиг не прошел.
-    fprintf(stdout, "%" PRIu64 "\n", 1 << (num - 1));
+    fprintf(stdout, "%" PRIu64 "\n", (uint64_t) 1 << (num - 1));
 }
 
 int main(void)
@@ -27,8 +26,8 @@ int main(void)
         return 1;
     }
 
-    var_one(num);
-//    var_two(num);
+//    var_one(num);
+    var_two(num);
 
     return 0;
 }
