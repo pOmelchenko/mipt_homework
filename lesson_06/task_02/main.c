@@ -1,24 +1,26 @@
 #include <stdio.h>
+#include <inttypes.h>
 
-void var_one(int num)
+void var_one(uint64_t num)
 {
-    int result = 1;
-    for (int i = 1; i < num; i++) {
+    uint64_t result = 1;
+    for (uint64_t i = 1; i < num; i++) {
         result *= 2;
     }
 
-    fprintf(stdout, "%d\n", result);
+    fprintf(stdout, "%" PRIu64 "\n", result);
 }
 
-void var_two(int num)
+void var_two(uint64_t num)
 {
-    fprintf(stdout, "%d\n", 1 << (num - 1));
+    // тест с num = 64 провалился, сдвиг не прошел.
+    fprintf(stdout, "%" PRIu64 "\n", 1 << (num - 1));
 }
 
 int main(void)
 {
-    int num;
-    scanf("%d", &num);
+    uint64_t num;
+    scanf("%"SCNu64, &num);
 
     if (num < 1 || num > 64) {
         fprintf(stderr, "число должно быть в диапазоне от 1 до 64\n");
@@ -26,7 +28,7 @@ int main(void)
     }
 
     var_one(num);
-    var_two(num);
+//    var_two(num);
 
     return 0;
 }

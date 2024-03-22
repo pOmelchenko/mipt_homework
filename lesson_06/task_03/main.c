@@ -18,7 +18,8 @@ int main(void)
     int a, b;
     scanf("%d%d", &a, &b);
 
-    fprintf(stdout, "NOD for a = %d and b = %d is %d", a, b, nod(a, b));
+//    fprintf(stdout, "NOD for a = %d and b = %d is %d", a, b, nod(a, b));
+    fprintf(stdout, "%d", nod(a, b));
 
     return 0;
 }
